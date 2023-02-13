@@ -37,7 +37,7 @@ Qt 是一个商用软件，但如果用于开源软件开发，则可以使用�
 
 **注意**：这里你可以
 1. 用默认选择 `Custom installation`，下一步自己选择要哪些组件和哪个版本，如果动手能力强，当然这种好，而且如果你要装和我一样的 `Qt 6.3`，只能用这种默认方法。
-2. 选择 `Qt Design Studio` 和 `Qt 6.* for desktop development`，让他帮你装上所有组件，和决定用哪个版本，这时候你无法选择人要安装哪些组件。
+2. 选择 `Qt Design Studio` 和 `Qt 6.* for desktop development`，让他帮你装上所有组件，和决定用哪个版本，这时候你无法选择要安装哪些组件。
 
 自己决定组件的时候，你可以像下图这样，把 `Qt 6.3.*` 整个选上，也可以打开它，进一步挑选要下哪些，比如，你可以把 `Android` 删掉，这些组件有什么用需要你自己研究，怕麻烦就全装。
 
@@ -45,7 +45,7 @@ Qt 是一个商用软件，但如果用于开源软件开发，则可以使用�
 
 ## 如何开始
 
-1. 任何时候官方文档([Getting Started with Qt](https://doc.qt.io/qt-6/gettingstarted.html))都是最佳选择。
+1. 任何时候官方文档 ([Getting Started with Qt](https://doc.qt.io/qt-6/gettingstarted.html)) 都是最佳选择。
 
 2. 在 Qt 中使用 F1 可以打开选中元素的官方文档。
 
