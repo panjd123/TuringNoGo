@@ -162,6 +162,7 @@ void NetworkSocket::send(NetworkData data);
 ```cpp
 void NetworkSocket::hello(const QString& host, quint16 port);
 ```
+
 用于与指定远程机器的指定端口建立网络连接。若当前对象已经与远程建立连接，则先断开它。
 
 参数列表：
@@ -175,6 +176,8 @@ void NetworkSocket::hello(const QString& host, quint16 port);
 > 接入 `RUC-Web` 和 `RUC-Mobile` 的设备在同一局域网中。
 >
 > 连接建立成功时会发射成员变量 `socket` 的信号 `connected()`；反之，连接建立失败时会发射成员变量 `socket` 的信号 `errorOccurred()`。
+>
+> 另外，这是一个非阻塞的函数，见 `guidance/qt`
 
 ----------
 

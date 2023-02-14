@@ -14,6 +14,6 @@ VSCode 中我推荐安装 Markdown All in One 这个插件，Markdown 转 PDF �
 
 ## 提示
 
-在本次实验中，请勿使用过于高级的 HTML 语法。如必须使用，请检查在 VSCode:Markdown All in One 和 Typora 中的兼容性。
+在本次实验中，请勿使用过于高级的 HTML 语法。如必须使用，请检查在 VSCode:Markdown All in One, Typora 和 GitHub 中的兼容性。
 
 另外，有个约定俗成的文档标准：最后一行留空行。建议大家都遵守，因为这个 GitHub 会让所有用它在线编辑的文档强制留空行。

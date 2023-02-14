@@ -220,7 +220,7 @@ Initialized empty Git repository in /home/jarden/test_git/.git/
 - 已暂存 (staged): 对一个已修改文件的当前版本做了标记，使之包含在下次提交的快照中。
 - 已提交 (committed): 数据已经安全地保存在本地数据库中。
 
-这三个状态的转化刚好了两个操作: `git add` 和 `git commit`
+这三个状态的转化刚好对应了两个操作: `git add` 和 `git commit`
 
 我们添加一个新文件，并使用 `git status` 获取状态
 
@@ -278,7 +278,7 @@ Date:   Fri Jan 13 12:14:39 2023 +0800
 
 ### 和 GitHub 交互
 
-刚刚我们已经成功在本地实现了版本控制，但我们更想要的是怎么传到 GitHub 上让所有人都可以修改这个项目。
+刚刚我们已经成功在本地实现了版本控制，接下来是关于怎么传到 GitHub 上让所有人都可以贡献这个项目。
 
 ###  创建一个远程仓库
 

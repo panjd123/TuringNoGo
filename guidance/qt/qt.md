@@ -245,15 +245,17 @@ MainWindow::MainWindow(QWidget *parent)
 
 ![](imgs/QtChat-chat.png)
 
+> 以上内容对应本目录下的 `QtChat/`
+
 ## 网络功能
 
-常见的网络协议有 HTTP, TCP, UDP 等，本次我们使用的是封装后的TCP协议
+常见的网络协议有 HTTP, TCP, UDP 等，本次我们使用的是封装后的TCP协议。
 
-我们提供了一个二次封装的网络库在 [`/network/src`](../../network/src/) 下
+我们提供了一个二次封装的网络库在 [`network/src/`](../../network/src/) 下。
 
-接口文档见 [`/doc/api.md`](../../network/doc/api.md)
+接口文档见 [`network/doc/api.md`](../../network/doc/api.md)。
 
-我们用 [QtNetworkDemo](https://github.com/panjd123/QtNetworkDemo) 来演示怎么使用这套网络接口
+我写了一个 [QtNetworkDemo](https://github.com/panjd123/QtNetworkDemo) 来演示怎么使用这套网络接口，希望对你有帮助。
 
 ### 其他重要说明
 
