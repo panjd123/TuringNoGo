@@ -245,7 +245,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 ![](imgs/QtChat-chat.png)
 
-> 以上内容对应本目录下的 `QtChat/`
+> 以上内容对应本目录下的 `QtChat/`，注意这只是一个图形界面，不包含任何网络功能。
 
 ## 网络功能
 
@@ -255,7 +255,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 接口文档见 [`network/doc/api.md`](../../network/doc/api.md)。
 
-我写了一个 [QtNetworkDemo](https://github.com/panjd123/QtNetworkDemo) 来演示怎么使用这套网络接口，希望对你有帮助。
+我重新写了一个 [QtNetworkDemo](https://github.com/panjd123/QtNetworkDemo) 来演示怎么使用这套网络接口，希望对你有帮助。
 
 ### 其他重要说明
 
