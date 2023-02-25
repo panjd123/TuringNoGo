@@ -329,7 +329,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ### 克隆一个远程仓库
 
-点击右上角的 `Code` 会显示项目的链接
+点击右上角的 `Code` 会显示项目的链接，注意，如果使用 ssh 的那个，那么无论仓库是不是 public 的，都得配置 ssh。
 
 ![](./imgs/clone.png)
 
