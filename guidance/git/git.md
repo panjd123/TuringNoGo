@@ -167,6 +167,8 @@ Git 是一款开源的版本控制系统。是当下最流行的版本控制系�
 
 如果你有一个私人项目，不想被人看到，那么 GitHub 可以用 SSH 验证你是否有权限。或者 HTTP，但是那样每次都要输密码。所以这里介绍 SSH。
 
+> 注意：为了避免事后奇怪的问题，除非你确定你在做什么，否则都先配好 SSH 再开始之后的工作。
+
 首先检查一下自己刚才配置的用户名和邮箱 `git config --global --list`。
 
 ```shell
@@ -294,6 +296,8 @@ Date:   Fri Jan 13 12:14:39 2023 +0800
 
 我们参考第二栏，在已经创建好的仓库里面输入下面三行：
 
+> 注意：如果使用 ssh 格式的链接，那么无论仓库是不是 public 的，都得配置 ssh。
+
 ```shell
 git remote add origin git@github.com:panjd123/git_test.git
 git branch -M master
@@ -329,7 +333,9 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 ### 克隆一个远程仓库
 
-点击右上角的 `Code` 会显示项目的链接，注意，如果使用 ssh 的那个，那么无论仓库是不是 public 的，都得配置 ssh。
+点击右上角的 `Code` 会显示项目的链接
+
+> 注意：如果使用 ssh 格式的链接，那么无论仓库是不是 public 的，都得配置 ssh。
 
 ![](./imgs/clone.png)
 
