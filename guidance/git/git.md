@@ -2,7 +2,7 @@
 
 ## Shell
 
-Git 是一个命令行程序，所以在学习 Git 之前，你有必要简单地了解一下命令行中简单的文件操作。演示操作系统为 Linux。当然你也可以跳过这一节，当你遇到问题时再回来看。
+Git 是一个命令行程序，所以在学习 Git 之前，你有必要简单地了解一下命令行中简单的文件操作。演示操作系统为 Linux。注意，如果你完全没听说过例如 `cd` 这个命令是什么意思，那么你必须先读完这部分，否则你完全没办法做后面的部分。
 
 > 要进入本地命令行，或者说终端，见 [如何在Windows 11中打开Windows终端？有七种方法可供选择](https://baijiahao.baidu.com/s?id=1722119296114582505&wfr=spider&for=pc) 和 [Mac电脑打开终端的三种方法](https://baijiahao.baidu.com/s?id=1742673139907938940&wfr=spider&for=pc)。
 
@@ -382,11 +382,13 @@ git merge upstream/master
 
 我们现在修改一下这个被 fork 出来的仓库，这种简单的工作可以直接在 GitHub 里面用可视化的面板完成，复杂的一般都是在本地用最初的流程来实现。
 
+所谓本地最初的流程，就是利用 `git clone <url>` 先把这个 fork 出来的仓库克隆到本地，然后用 `git add`, `git commit`, `git push` 等方式去修改。
+
 > 注意 task0 中的要求，为了熟悉 Git 的命令行操作，task0 中的工作要全程用命令行处理，熟悉之后你们可以用你们喜欢的方法。
 
 我们在 `a.txt` 中添加了一行 `line2`
 
-然后点击 `Pull Requests`
+然后在你 fork 出来的仓库中点击 `Pull Requests`
 
 现在它帮你显示了你的仓库和上游仓库的区别，而我们想做的是把这个修改提交给上游审核，所以我们点击 `Create pull request`
 
