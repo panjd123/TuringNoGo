@@ -524,7 +524,7 @@ Creating a new branch is quick and simple.
 
 `git commit` 的时候，[基本的格式](https://blog.csdn.net/xlinsist/article/details/54933623)和内容都很重要，如果这个项目要给别人看和理解，那就请不要随便地对待这一件事。
 
-你应该写具体的内容，比如更新了什么功能或修改了什么Bug，而不是更新了A文件。如果内容太多，那么应该写个概括的标题，并在 commit 的正文里（支持 Markdown 语法）补充完整的更新内容。
+你应该写具体的内容，比如更新了什么功能或修改了什么Bug，而不是更新了A文件。如果内容太多，那么应该写个概括的标题，并在 commit 的正文里补充完整的更新内容。
 
 在 Windows 下，你可以配置 Git 的默认编辑器为 VSCode 之类的，然后只 `git commit` 。打开的文件就是待提交的 commit 记录，第一行的标题，空一行，第二行开始就是正文。
 
