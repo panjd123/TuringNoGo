@@ -1,12 +1,16 @@
 # 3月7日上机课
 
-## 阶段0 回顾
+> 由于助教不幸~~疑似~~感染甲流，遂大作业的第一节上机课内容仍然以文档的形式提供（讲道理，应该都更喜欢文档吧）。
+
+## 阶段0回顾
 
 ### commit message
 
-`commit message` 应该写改动的内容。
+`commit message` 应该写改动的内容，比如修复了功能，添加了文件。
 
-和库管理员交流的语句应该是放在 `pr` 的评论里。
+和库管理员交流的话应该是放在 `pr` 的评论里。
+
+有几个组用 `commit message` 和我聊天，不太应该。
 
 ### 命令行界面 Command-line interface(CLI)
 
@@ -21,7 +25,7 @@
 
 ![](imgs/Bash_screenshot.png)
 
-## 大作业
+## 大作业总览
 
 [overview](../../task/1.1-overview.md) 里已经对大作业整体要求做了很详细的说明，以下是一些强调。
 
@@ -31,13 +35,15 @@
 
 ### 面向对象编程
 
-我们要求面向对象编程，尽量用类，如果你不用类来写我们视作没有按规定完成大作业，会扣分。
+我们要求面向对象编程，尽量用类，如果你不用类来写我们视作没有按规定完成大作业。
 
-具体地，例如棋盘，玩家，棋子各是一类，你可以参考下图，其中虚线表示包含关系，实线表示继承关系，圈箭头表示功能。
+具体地，你可以参考下图某个跳棋程序的类的关系，其中虚线表示包含关系，实线表示继承关系，圈箭头表示功能。
 
 ![](imgs/class.jpg)
 
 ### 代码风格
+
+这个话题以后如果我看到了，就会扯一句。虽然代码风格不显式地打分，但如果问除了 [Google C++ style guide](https://google.github.io/styleguide/cppguide.html)，可以参考什么具体项目，那我大概率会说 [`Google Chromium`](https://source.chromium.org/chromium/chromium/src)。
 
 一般情况下，工业中不写
 
@@ -55,12 +61,12 @@ using Liberty = std::pair<int, int>;
 using LibertySet = std::set<Liberty>;
 
 // 合并两个气集合
-void mergeSet(LibertySet &x, LibertySet &y);
+void mergeLibertySet(LibertySet &x, LibertySet &y);
 ```
 
-但这不是必须的，对于比较简单的项目，这么写对于开发人员可能是负担。
+但这不是必须的，对于比较简单好理解的项目，这么写对于开发人员可能是负担。
 
-但如果你考虑代码的可读性，后人能否维护等等，这么写是有必要的。
+但如果你考虑代码的可读性，后人能否方便地维护等等，这么写是有必要的。
 
 例如当你的代码复杂到这样的时候：
 
@@ -105,10 +111,26 @@ using EnableIfSpanCompatibleArray =
                      ContainerHasConvertibleData<Array, T>::value>;
 ```
 
-> 以上是 chromium 的[源代码节选](https://source.chromium.org/chromium/chromium/src/+/main:base/containers/span.h)，chromium 就是 Google Chrome 的开源版本。如今的 Edge, 360 极速浏览器等等都是基于 chromium 开发的。其开发语言是 C++，这个项目的源代码有几个 G。
+> 以上是 chromium 的[源代码节选](https://source.chromium.org/chromium/chromium/src/+/main:base/containers/span.h)，chromium 就是 Google Chrome 的开源版本。如今的 Edge, 360 极速浏览器等等都是基于 chromium 开发的。其开发语言是 C++，这个项目的源代码有3.2G，4000w行。
+>
+> 可以看到，它的命名都非常长，工业中一般都是这样。
 
-## 阶段1
+### 抄袭说明
 
-简单说，这一阶段的任务就是写一个规则完善的不围棋。不用考虑网络，AI，或者非规则内的基本内容。
+顺便再强调一次 [抄袭说明](../../task/1.1-overview.md#抄袭说明)，请仔细阅读，因为观察到有的组的界面和现有开源仓库内的长得一模一样。
 
-另外，因为第一阶段结束之后，第二阶段可能会撞上期中考，所以你可以考虑提前做一点第二阶段。
+### 分工提示
+
+第三阶段的 AI 可能比较简单，而且几乎都是面向过程，所以写AI的人最好适度参与到前面中。
+
+## 阶段1指南
+
+详情见 [task1](../../task/2.2-stage1.md)，和最初相比做了微小的删减，将一小部分移到了下一阶段。
+
+简单说，这一阶段的任务就是用 Qt 写一个基本规则完善的不围棋。不用考虑网络，AI，非规则内的温馨功能，或者说，能玩就行。
+
+其中要实现计时功能你们可以利用 `QTimer`。
+
+另外，虽然第一阶段的截止日期是4月4日，但因为第二阶段可能会撞上期中考，所以你可以考虑提前做一点第二阶段。理想状态下是学一周 Qt，两周把第一阶段写完，然后最后一周开始写第二阶段。
+
+一旦完成了第一阶段，就可以在上机课上找潘俊达助教（男的助教）检查。
