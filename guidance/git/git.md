@@ -162,6 +162,7 @@ Git 是一款开源的版本控制系统。是当下最流行的版本控制系�
     ```
 5. 配置 SSH
 6. 搭配魔法，还需要配置 Git 代理，如果不搭配魔法则不需要
+7. 针对不同操作系统，GitHub上一些教程：[Generating a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=mac),[Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui&platform=mac)
 
 ### 配置 SSH
 
