@@ -83,7 +83,8 @@
     player->play();
     ```
   
-    
+  
+  *为了实现上述功能，我们在.pro文件中添加了`QT       += multimedia`,并且在.h文件中新增了`#include <QMediaPlayer>`和`#include <QAudioOutput>`两个头文件来使用上述函数*
   
   *这段代码主要来自于Qmediaplay的官方文档，如下图，本组添加了`player->setLoops(INFINITY);`以使得bgm循环播放*
   
