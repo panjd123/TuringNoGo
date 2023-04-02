@@ -1,6 +1,6 @@
 # 程序设计大作业第一阶段报告
 
-*撰写人：梅祎航，杜非员*
+撰写人：梅祎航，杜非原
 
 
 
@@ -70,14 +70,32 @@
 
     ![](image/stage_1_2.png)
   
-  * *本组添加了斗地主bgm作为了游戏bgm，符合中国人民的审美趋向，反应了本组”实事求是“的作风，为弘扬中国优秀传统文化，打造文化自信献上了本组的绵薄之力*
+  * *本组添加了斗地主bgm作为了游戏bgm，符合中国人民的审美趋向，反应了本组”实事求是“的作风，为弘扬中国优秀传统文化，打造文化自信献上了本组的绵薄之力,代码如下*
+  
+    ```cpp
+    player = new QMediaPlayer;
+    audioOutput = new QAudioOutput;
+    player->setAudioOutput(audioOutput);
+    connect(player, SIGNAL(positionChanged(qint64)), this, SLOT(positionChanged(qint64)));
+    player->setSource(QUrl::fromLocalFile("E:\\Qt_project\\big_project\\demo\\image\\bgm.mp3"));
+    audioOutput->setVolume(50);
+    player->setLoops(INFINITY);
+    player->play();
+    ```
+  
+  
+  *为了实现上述功能，我们在.pro文件中添加了`QT       += multimedia`,并且在.h文件中新增了`#include <QMediaPlayer>`和`#include <QAudioOutput>`两个头文件来使用上述函数*
+  
+  *这段代码主要来自于Qmediaplay的官方文档，如下图，本组添加了`player->setLoops(INFINITY);`以使得bgm循环播放*
+  
+  ![](image/stage_1_4.png)
   
   * *本组引入国产之光游戏~~op~~《原神》的派蒙作为游戏的logo（下图左上角），体现了本组对国产游戏的支持和喜爱*
-  *  *贴心给对战者加入了称号系统，让对战者更有成就感*
+  * *贴心给对战者加入了称号系统，让对战者更有成就感*
 
 ![](image/stage_1_1.png)
 
-
+​	
 
 
 
