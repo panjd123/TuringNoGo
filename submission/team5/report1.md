@@ -13,15 +13,15 @@
 ### 具体实现
 #### 代码框架
 
-![image](https://github.com/Liyh04/2205/blob/main/image_in_md/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-02%20154924.png)
+![image](./images/屏幕截图 2023-04-02 154924.png)
 
 > 简洁美丽o(*￣▽￣*)ブ
 
-![widget.cpp概览](https://github.com/Liyh04/2205/blob/main/image_in_md/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-02%20220225.png)
+![widget.cpp概览](./images/屏幕截图 2023-04-02 220225.png)
 
 > 这是widget.cpp的概览
 
-![](https://github.com/Liyh04/2205/blob/main/image_in_md/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-02%20220348.png)
+![](./images/屏幕截图 2023-04-02 220348.png)
 
 > ”鼠标按下事件“函数的概览
 
@@ -31,7 +31,7 @@
 
   * 棋盘和棋子均采用了image图片，这样比较美观
 
-   ![image-20230402163659098](https://github.com/Liyh04/2205/blob/main/image_in_md/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-02%20163626.png)
+   ![image-20230402163659098](./images/屏幕截图 2023-04-02 163626.png)
 
   * 在chess.h中，我们定义了棋子的成员，其中位置采用了Qpoint；在widget中，我们采用vector容器来记录已下的棋子
 
@@ -46,11 +46,11 @@
 
 * ##### 计时器
 
-  ![image-20230402162742409](https://github.com/Liyh04/2205/blob/main/image_in_md/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-02%20164019.png)
+  ![image-20230402162742409](./images/屏幕截图 2023-04-02 164019.png)
 
   > 将时间限制设置为一个可以调节的参数：）
 
-  ![image](https://github.com/Liyh04/2205/blob/main/image_in_md/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-02%20162732.png)
+  ![image](./images/屏幕截图 2023-04-02 162732.png)
 
   * 采用艺术化的字体，让玩家体会到数字之美
 
@@ -58,11 +58,11 @@
 
   * 如果下了不合法的位置
 
-    ![image-20230402163824757](https://github.com/Liyh04/2205/blob/main/image_in_md/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-02%20163615.png)
+    ![image-20230402163824757](./images/屏幕截图 2023-04-02 163615.png)
 
   * 计算了下棋步数
 
-    ![image-20230402163932617](https://github.com/Liyh04/2205/blob/main/image_in_md/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202023-04-02%20163642.png)
+    ![image-20230402163932617](./images/屏幕截图 2023-04-02 163642.png)
     
   * 我们曾经尝试在游戏中插入音频来增强趣味性，但考虑到生成的莫名其妙的超过100MB的qrc文件以及程序在其他人电脑上可能无法运行等因素，我们暂时取消了代码中与多媒体相关的内容。
 
