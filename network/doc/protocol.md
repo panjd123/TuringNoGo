@@ -48,9 +48,17 @@
 决定如何行棋后，向对方发送 `MOVE_OP`
 
 - `data1`：落子点坐标
-- `data2`：空
+- `data2`：己方落子时间戳，己方从这个时间戳开始计时对方的超时。
 
 坐标编码：用 `A1`，`I9` 这种表示，坐标轴方向同 [nogo.md](../../guidance/nogo/nogo.md) 中所示，双方不旋转棋盘，也就是视角是相同的。
+
+时间戳：统一用 `QDateTime::currentMSecsSinceEpoch` 返回的结果。
+
+> qint64 QDateTime::currentMSecsSinceEpoch()
+> 
+> Returns the number of milliseconds since 1970-01-01T00:00:00 Universal Coordinated Time. This number is like the POSIX time_t variable, but expressed in milliseconds instead.
+
+时间戳意味着，假设超时时间是 3000 毫秒，例如我是黑方先手，我在发送 `MOVE_OP` 时获取当前时间是 10000（data2 的信息即设 10000），我的计时器就以此为头开始计时，如果 13000 这一刻我没有收到消息就给对方发超时。然后看白方，白方收到 `MOVE_OP`，data2 是 10000，但其实它收到的那一刻已经是 10500 了，但它仍然要在 13000 时保证能发到对方手中，所以你的计时器要变一下。原则上来说，你最好设倒计时剩余时间为 3000 - 2*(10500-10000)，也就是加上发回去对方收到的预计耗时。
 
 ### `GIVEUP_OP`
 
