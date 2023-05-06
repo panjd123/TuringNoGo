@@ -181,10 +181,8 @@ void NetworkSocket::hello(const QString& host, quint16 port);
 	- 除非你的电脑有专属的 IPv4 公网地址（通常情况下这不可能），否则你应该让所有客户端与服务端接入同一个局域网（如校园网），并在此传入内网地址。
 + `port`: 远程机器的端口号。
 
-> "温馨提示": 如果你的设备接入的是 `RUC-Web`，你的内网地址大概率形如 `10.46.X.X`；如果你的设备接入的是 `RUC-Mobile`，你的内网地址大概率形如 `10.47.X.X`。
+> "温馨提示": 如果你的设备接入的是 `RUC-Web`，你的内网地址大概率形如 `10.46.X.X`；实测，`RUC-Mobile` 似乎不能正常连上，所以最好都用 `RUC-Web`。
 > 
-> 接入 `RUC-Web` 和 `RUC-Mobile` 的设备在同一局域网中。
->
 > 连接建立成功时会发射成员变量 `socket` 的信号 `connected()`；反之，连接建立失败时会发射成员变量 `socket` 的信号 `errorOccurred()`。
 >
 > 另外，这是一个非阻塞的函数，见 `guidance/qt`
