@@ -1,6 +1,8 @@
 # 网络接口
 
 网络接口被封装为三个库，下面依次说明其中提供的全部公有接口的作用及其调用方式。对私有方法的实现与作用感兴趣的同学可自行查阅源代码探索。
+另外，我们并没有完全封装，有一些重要的功能你要直接使用基类函数，比如 `NetworkServer::listen`，这意味着你们需要在结合 demo 阅读的同时用好 Qt 的 F1 文档
+来理解我们没有提到的部分。
 
 对应文件在目录 [src](../src/) 下
 
@@ -24,6 +26,14 @@ explicit NetworkServer::NetworkServer(QObject* parent = nullptr);
 参数列表：
 
 + `parent`: 应传入一个指向与当前 `NetworkServer` 对象绑定的窗口的指针。默认值为 `nullprt`，即不与任何窗口绑定。
+
+----------
+
+```cpp
+bool QTcpServer::listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 0);
+```
+
+Tells the server to listen for incoming connections on address address and port port. If port is 0, a port is chosen automatically. If address is QHostAddress::Any, the server will listen on all network interfaces.
 
 ----------
 
