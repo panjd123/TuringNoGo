@@ -5,34 +5,50 @@
 
 #### 棋盘绘制
 
-采用了最普通的棋盘画法，使用程序绘图，没什么UI设计
+棋盘绘制采用了程序画图，棋子也采用了程序绘制，直径为绘制棋盘格的边长，以下是绘图事件函数
 
-![img](http://a1.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5p5zdXBwlK1gLwqqYUWXuIVhdXdZ31RqjHdgUWM2AfcD2ueC3ujdWyu5X9s5o6KBPPwvrrC3XbXFbauJg5qG8Zk!/c&ek=1&kp=1&pt=0&bo=kgU4BAAAAAADF5k!&tl=1&vuin=1353156306&tm=1680534000&dis_t=1680536894&dis_k=09fdee4b78ec15da101882869280c79e&sce=60-2-2&rf=0-0)
+![img](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5oHaSeVvWt7q7EF2TaTJEFzu*AKc4rVyZZi8yPXPPKhtHBM0kLjO3dj6sgH.dUK7Cb5cD4vbqzFAFCbJ*aJIrKE!/b&bo=mgImAAAAAAADB5w!&rf=viewer_4)
 
-使用灰色的背景区分棋盘部分与其他部分，
+棋子颜色的选择采用了RGB设置，即（0，0，0）和（255，255，255）
 
-![img](http://a1.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5h8xT*7yXYfRPtGEr7EGiwwrbEwMcHBXVqRfgOHQe4MCQMI.keCWcxPWrVNlHlvymci*v.Rs9juXyd*vAhfnzpk!/c&ek=1&kp=1&pt=0&bo=YAU4BAAAAAADJ1s!&tl=1&vuin=1353156306&tm=1680534000&dis_t=1680537427&dis_k=74cf07ca50ae5f4daed669f6699e0dde&sce=60-2-2&rf=viewer_4)
+![img2](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5m1XNljK7ld.5M4t.TowIiDE4A4PMKr0DssOZRVSrqCQ1rrWKbY0s1HepkrHYgOdfx8Lp7KnqOKn.Pwvc7*cjN0!/b&bo=XgRYAgAAAAADFzI!&rf=viewer_4)
+
+在绘制棋子存储棋子位置时，为了方便判断棋子气数以及方便搜索，将棋子所在屏幕的实际像素位置除以了棋盘宽度，这样方便建立棋盘格与棋子坐标的映射，实现如下
+
+![img3](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5m1XNljK7ld.5M4t.TowIiCwWIOL*hVcOmplDG.6FodMclj.clIWiLv0rGj.DtdHLG9GSlKPwM5gEOI2u6K7PcY!/b&bo=CAJCAAAAAAADF3o!&rf=viewer_4)
+
+设置的计时器为每人思考15秒时长，超时停止计时器计时并直接判对方胜，当一方下完棋时需要点击屏幕右侧的“我下完了”按钮重置计时器计时，如不点击会提示用户未到下棋时间，黑子第一手不计时
+
+![img4](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5v0eH3zjWOYbLudyMSNcAueSMF3IzYUOTrduNcUzcb365FFGmQZeHEZmS1erZZSAUa2jdiTG6pB8*AtwQkqmA4U!/b&bo=AwU4BAAAAAADFwg!&rf=viewer_4)
+
+![](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5sXxbb4qsJwdwngjyWfwk.iXvCUdM.5Yso.xsPemxsd1U.G.*i6GfvBEXvOg.2j0MR21JUMT968JO5Px0A1MD5w!/b&bo=IgU4BAAAAAADJxk!&rf=viewer_4)
+
+![img6](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5sXxbb4qsJwdwngjyWfwk.huBgClXV*Dn35W814lBVnIKFcbhc*vf7tpfVXV1fQjKbtpNAYFm1SftxOl5Uhh*Zk!/b&bo=MAU4BAAAAAADFzs!&rf=viewer_4)
 
 
-
-棋子选用经典的黑白配色，并且棋子可以跟随鼠标进行移动。
-
-以下是使用到的函数
-
-![](http://a1.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5oHaSeVvWt7q7EF2TaTJEFw5fVewdiSO9FRRtLQ79Kgdht9nbtxm.zEO8.RD4kQFBSU4E55I3VyglsJctVUg338!/c&ek=1&kp=1&pt=0&bo=zgRqAwAAAAADJ6E!&tl=1&vuin=1353156306&tm=1680537600&dis_t=1680537652&dis_k=587ab2fa0d4d51752362dfda0a42041f&sce=60-2-2&rf=viewer_4)
-
-在绘制棋子的函数中加入了判定鼠标位置防止其在棋盘外的区域绘制棋子，使用QVector来存储棋子
 
 #### 规则判断
 
-采用dfs搜索棋子块以及其是否有气，棋子块是否有气的判定采用了在搜索到每颗棋子时都进行对其四周的检查，有几个空格就加几个气，因为该游戏只需要判定棋子块是否有气即可，因此对棋子块的气的重复计算不会对结果的判定产生影响（但是可能会对后续的AI部分的估值函数产生影响，后续再改一下）
+判断棋子气数采用了深度优先搜索，每下一次棋会搜索棋子周围是否为边界或标记过的同色子，有无异色子，若有，则进入下次循环，若没有，则判断周围是否有空子，若有空子则说明该棋子有气，退出搜索，若没有空子则检查周围是否有未标记的同色子，若有则搜索该同色子，若没有则说明该棋子块没有气，对方败，以下为判断函数
 
-十分抱歉的是，在编写完函数运行后发现下几颗棋子就会导致程序崩溃（死循环了），因此这部分还没有完成，十分抱歉十分抱歉（哭😭）
+![img7](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5v0eH3zjWOYbLudyMSNcAucJzJB5fAH6EiY1dnRHFYOsGWbxzUeqOaxDthf3DOIS12.7kKV.PIKGIhBtilr6YRA!/b&bo=ngFKAAAAAAADF.c!&rf=viewer_4)
 
-过两天会改好的（大哭😭
+![img8](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5v0eH3zjWOYbLudyMSNcAudQdUNeHe*fcCL0k.XenUOjMHwxFmAk28JqgbfWU66VyQ*jOMq9FXSrIhEwqfhUKqg!/b&bo=*gSkAgAAAAADF24!&rf=viewer_4)
 
-## 致谢 
+![img9](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5v0eH3zjWOYbLudyMSNcAueU8tbfusq2APOP51v5Ga1MEWLZ*DIlkjYTuS*9MWjDwYGRL3R*ghXxouFF5ga9XB8!/b&bo=0gVaAgAAAAADF70!&rf=viewer_4)
+
+
+
+以下是MainWindow.h
+
+![img12](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5kAJxPmaCHarmKYW48E2BBY37qRwUvWZ4mG5AW*yC3in.kb2.TEH2fV.JBygBwFopS.H9x1q5.woDVVMZgYseUI!/b&bo=oAMkBAAAAAADJ4E!&rf=viewer_4)
+
+![img11](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5kAJxPmaCHarmKYW48E2BBblAdiu3Z9Z2XEMAALNmJjOS6O1RD*p8aA*QWR*HpwfzLxys3QKs4YiklB0goRjhWA!/b&bo=mAIQBAAAAAADF7w!&rf=viewer_4)
+
+![img10](http://m.qpic.cn/psc?/V14BODuP0JJm1D/ruAMsa53pVQWN7FLK88i5kAJxPmaCHarmKYW48E2BBaB9VtGd1AGl3h5DoovM4Br0hMoW0PgIB.SYSoUk1*r06n2xz4M6YH6RDQBeRdwrSo!/b&bo=tgR0AgAAAAADB.Y!&rf=viewer_4)
+
+
+
+## 致谢
 
 感谢孙亚辉老师和潘俊达及王卓冉两位助教的教导
-
-感谢浙江大学Xishanqiming学长对我学业上的关照
