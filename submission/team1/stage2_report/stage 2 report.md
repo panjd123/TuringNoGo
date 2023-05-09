@@ -42,7 +42,9 @@ bool MainWindow::setting_show() //设置界面
        if(you_giveup) {
            out<<"G";
        }
-       if()
+       if(out_of_timelimit) {
+          out<<"T";
+       }
        file.close();
        QString currentPath = QDir::currentPath();
        //qDebug() << "Current working directory: " << currentPath;
