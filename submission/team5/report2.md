@@ -134,7 +134,7 @@ void InputDialog::onOKButtonClicked()
 
 结算画面：
 
-![](/images2/finish.png)
+![](./images2/finish.png)
 
 ### 具体实现
 
@@ -146,7 +146,7 @@ void InputDialog::onOKButtonClicked()
 
   * 结束后，点击save可以保存对局信息。玩家可以选择保存在本地的位置，同时文件自动命名为“save_ 年份日期 _时分秒.txt"。
 
-    ![](/images2/save_file.png)
+    ![](./images2/save_file.png)
 
 * 高亮对手和自己最近一步棋子
 
@@ -164,9 +164,9 @@ void InputDialog::onOKButtonClicked()
 
     > 假如格式错误，在大多数情况下（如输入坐标不合法）可以弹窗警告输入错误，小部分情况（如将空格改为其他字符）仍可以复现出正确的棋盘，或者（输入了两个相同的坐标）两个棋子会重叠（但看不出来。。。
 
-![](/images2/input_save.png)
+![](./images2/input_save.png)
 
-![](/images2/replay.png)
+![](./images2/replay.png)
 
 + 实现客户端向服务端发起连接
   + 实践是检验真理的唯一标准，我们在同一台电脑上同时打开两个窗口进行试验，发现一方先点击“RestartServer”，另一方再点击“ReSet”即可成功连接。
