@@ -33,8 +33,8 @@
 
 ### 不围棋AI研究
 
-郭倩宇, 陈优广. 基于价值评估的不围棋递归算法[J]. 华东师范大学学报 (自然科学版), 2019, 1: 58-65.
+[郭倩宇, 陈优广. 基于价值评估的不围棋递归算法[J]. 华东师范大学学报 (自然科学版), 2019, 1: 58-65.](https://xblk.ecnu.edu.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=25582)
 
-梁国军, 谢垂益, 胡伶俐, 等. UCT 算法在不围棋博弈中的实现[J]. 韶关学院学报, 2015, 36(8): 17-21.
+[梁国军, 谢垂益, 胡伶俐, 等. UCT 算法在不围棋博弈中的实现[J]. 韶关学院学报, 2015, 36(8): 17-21.](http://119download.cqvip.com/DownPaper.dll?DownCurPaper&CD=2015GC532&Info=BJBJAOADABAHAAHGBJBJBJAGABABAFADABADACADBIAHAAAGAOAGAP&FILE=036/008/666077543.pdf&FileName=UCT%cb%e3%b7%a8%d4%da%b2%bb%ce%a7%c6%e5%b2%a9%de%c4%d6%d0%b5%c4%ca%b5%cf%d6.pdf)
 
 > 借鉴其中的估值函数即可
