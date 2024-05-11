@@ -255,7 +255,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 接口文档见 [`network/doc/api.md`](../../network/doc/api.md)。
 
-我重新写了一个 [QtNetworkDemo](https://github.com/panjd123/QtNetworkDemo) 来演示怎么使用这套网络接口，希望对你有帮助。
+我重新写了一个 [QtNetworkDemo](https://github.com/JongMelon/QtNetworkDemo) 来演示怎么使用这套网络接口，希望对你有帮助。
+
+> 还有一个去年的 [Demo](https://github.com/panjd123/QtNetworkDemo) 可供参考，内容和今年的几乎一模一样
 
 ### 其他重要说明
 
